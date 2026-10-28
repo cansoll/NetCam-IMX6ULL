@@ -1,0 +1,11 @@
+# 编译生成的二进制文件
+pc_preview
+*.o
+
+# 测试生成的图片
+*.jpg
+!test_sample.jpg   # 如果你想传一张演示图，用这个保留
+
+# 其他
+.vscode/
+.idea/
