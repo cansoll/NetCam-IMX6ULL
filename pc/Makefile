@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -O2 -pthread
+CFLAGS = -Wall -O2 -pthread -I../common
 LIBS = -ljpeg -lSDL2 -lpthread
 
 TARGET = pc_preview

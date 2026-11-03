@@ -3,6 +3,7 @@
 
 #include <pthread.h>
 #include <stddef.h>
+#include "../common/common.h"
 
 // 定义共享结构体
 struct SharedFrame {
@@ -15,6 +16,7 @@ struct SharedFrame {
 // 用 extern 告诉编译器，这些全局变量在 main.c 里面已经定义了。
 extern struct SharedFrame shared;
 extern volatile int keep_running;
+extern int g_server_fd; // 【新增这一行】
 extern int g_client_fd;
 extern int g_port;
 

@@ -13,6 +13,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <stdint.h>
+#include "../common/common.h"
 
 // ---------------- 全局变量 ----------------
 struct camera_buffer { void *start; size_t length; };
@@ -38,12 +39,6 @@ static struct frame_queue queue = {
     .not_full = PTHREAD_COND_INITIALIZER
 };
 
-// 自定义帧头，必须和 PC 端一致
-struct frame_header {
-    uint32_t frame_size;
-    uint32_t frame_id;
-    uint32_t magic;
-} __attribute__((packed));
 
 int g_sockfd = -1; // 全局网络套接字
 
