@@ -5,6 +5,11 @@
 ## 📸 项目演示
 
 
+
+##压测报告
+24h test  约22.4fps，无内存泄漏
+
+
 ## 🛠 技术栈
 *   **设备端：** C, Linux, V4L2, MMAP, pthread, TCP Socket
 *   **PC 端：** C, TCP Socket, libjpeg, SDL2, Makefile
